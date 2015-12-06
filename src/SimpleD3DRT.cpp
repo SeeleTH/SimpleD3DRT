@@ -1,5 +1,4 @@
 #include "SimpleD3DRT.h"
-#include "win32helper.h"
 
 #include <crtdbg.h>
 
@@ -11,5 +10,5 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 #endif
 
-	return 0;
+	return (SimpleD3DRTApp("Simple Ray Tracing Application", 1600, 900, false)).Run();
 }

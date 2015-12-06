@@ -24,6 +24,8 @@
     <ClCompile Include="..\src\mathelper.cpp" />
     <ClCompile Include="..\src\oshelper.cpp" />
     <ClCompile Include="..\src\SimpleD3DRT.cpp" />
+    <ClCompile Include="..\src\threadhelper.cpp" />
+    <ClCompile Include="..\src\win32helper.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\camhelper.h" />
@@ -35,6 +37,7 @@
     <ClInclude Include="..\include\samplinghelper.h" />
     <ClInclude Include="..\include\SimpleD3DRT.h" />
     <ClInclude Include="..\include\templatehelper.h" />
+    <ClInclude Include="..\include\threadhelper.h" />
     <ClInclude Include="..\include\win32helper.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
