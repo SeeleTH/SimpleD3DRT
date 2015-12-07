@@ -2,6 +2,7 @@
 #define SIMPLED3DRT_H
 
 #include "win32helper.h"
+#include "d3dhelper.h"
 
 class SimpleD3DRTApp : public NPWin32Helper::SingleWindowApp
 {
@@ -11,5 +12,11 @@ public:
 	{}
 
 protected:
+	virtual int onWindowInited();
+	virtual int onWindowUpdated(float deltaTime);
+	virtual int onWindowDestroyed();
+	virtual int onWindowResize();
+
+	NPD3DHelper::D3DContext m_D3dContext;
 };
 #endif

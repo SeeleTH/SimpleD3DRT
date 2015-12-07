@@ -49,5 +49,26 @@ namespace NPOSHelper
 	{
 		SetCurrentDirectory(dir.c_str());
 	}
+
+	__int64 GetCurPerfCount()
+	{
+		__int64 count;
+		QueryPerformanceCounter((LARGE_INTEGER*) &count);
+		return count;
+	}
+
+	float GetPerfSecPerCount()
+	{
+		static float secPerCount = 0;
+		if (secPerCount == 0)
+		{
+			__int64 freq;
+			QueryPerformanceFrequency((LARGE_INTEGER*)&freq);
+			secPerCount = 1.0f / (float)freq;
+		}
+		return secPerCount;
+	}
+
+
 #endif
 }

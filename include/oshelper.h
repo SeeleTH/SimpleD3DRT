@@ -28,6 +28,9 @@ namespace NPOSHelper
 
 	std::string GetOSCurrentDirectory();
 	void SetOSCurrentDirectory(std::string &dir);
+
+	__int64 GetCurPerfCount();
+	float GetPerfSecPerCount();
 }
 
 #endif

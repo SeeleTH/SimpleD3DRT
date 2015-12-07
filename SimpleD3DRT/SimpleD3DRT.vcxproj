@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\d3dhelper.cpp" />
     <ClCompile Include="..\src\geohelper.cpp" />
     <ClCompile Include="..\src\hdrhelper.cpp" />
     <ClCompile Include="..\src\mathelper.cpp" />
@@ -29,6 +30,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\camhelper.h" />
+    <ClInclude Include="..\include\d3dhelper.h" />
     <ClInclude Include="..\include\geohelper.h" />
     <ClInclude Include="..\include\hdrhelper.h" />
     <ClInclude Include="..\include\macrohelper.h" />

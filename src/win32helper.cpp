@@ -1,4 +1,5 @@
 #include "win32helper.h"
+#include "oshelper.h"
 
 namespace NPWin32Helper
 {
@@ -17,7 +18,14 @@ namespace NPWin32Helper
 
 		while (loopWin32())
 		{
-			if (!onWindowUpdated())
+			float deltaTime = 0;
+			__int64 curCount = NPOSHelper::GetCurPerfCount();
+			if (m_i64CurPrefCount != 0 && m_bActivated)
+			{
+				deltaTime = (curCount - m_i64CurPrefCount) * NPOSHelper::GetPerfSecPerCount();
+			}
+			m_i64CurPrefCount = curCount;
+			if (!onWindowUpdated(deltaTime))
 				break;
 		}
 

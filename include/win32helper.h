@@ -54,7 +54,7 @@ namespace NPWin32Helper
 		LRESULT msgProcWin32(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
 		virtual int onWindowInited(){ return 1; };
-		virtual int onWindowUpdated(){ return 1; };
+		virtual int onWindowUpdated(float deltaTime){ return 1; };
 		virtual int onWindowDestroyed(){ return 1; };
 		virtual int onWindowResize(){ return 1; }
 
@@ -70,6 +70,8 @@ namespace NPWin32Helper
 		BOOL m_bMinimized;
 		BOOL m_bMaximized;
 		BOOL m_bResizing;
+
+		__int64 m_i64CurPrefCount;
 	};
 }
 
